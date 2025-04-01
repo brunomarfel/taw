@@ -7,7 +7,7 @@
   
   <script>
   export default {
-    name: 'MyFooter'  // Nome do componente com duas palavras
+    name: 'MyFooter'  
   };
   </script>
   
