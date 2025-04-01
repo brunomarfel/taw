@@ -1,33 +1,35 @@
 <template>
-  <div id="app">
-    <header>
-      <h2>Teste</h2>
-      <nav>
-        <router-link to="/">Login</router-link>
-        <router-link to="/dashboard">Dashboard</router-link>
-      </nav>
-    </header>
 
-    <!-- Conteúdo da página -->
+  <div id="app">
+   
+    <MyHeader />
+    
     <router-view />
 
-    <footer>
-
-      <p>Desenvolvido por Bruno França</p>
-      <p>Abril 2025</p>
-      
-    </footer>
+    <MyFooter />
 
   </div>
+
 </template>
 
+
 <script>
+
+import MyHeader from './components/MyHeader.vue';  
+import MyFooter from './components/MyFooter.vue';  
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    MyHeader,  
+    MyFooter  
+  }
 };
+
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,43 +56,6 @@ nav a.router-link-active {
   color: rgb(207, 80, 80);
 }
 
-/* Header */
-header {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 10px 20px; 
-  background-color: #4D6376;
-  color: #F4F4F4;
-  margin-bottom: 50px;
-}
-
-header h2 {
-  margin: 0; 
-}
-
-header nav {
-  display: flex; 
-}
-
-header nav a {
-  
-  color: #F4F4F4; 
-  margin-left: 15px; 
-}
-
-header nav a:hover {
-  color: #131313; 
-}
-
-/* Footer */
-footer {
-  background-color: #4D6376;
-  color: #f4f4f4; 
-  padding: 20px;  
-  margin-top: 50px;
-}
-
 .form-container {
   max-width: 800px;  /* Limita a largura do formulário */
   margin: 0 auto;    /* Centraliza o formulário */
@@ -100,11 +65,8 @@ footer {
 }
 
 form {
-  padding: 20px;
+  padding: 15px;
 }
 
-
-
-
-
 </style>
+
